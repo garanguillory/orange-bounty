@@ -4,12 +4,76 @@
 
 
 {% block content %}
+	<nav>
+		
+			<a href="/">Orange Bounty</a>
+			<a href="/products">Products</a>
+			<a href="/checkout">Checkout</a>
+		
+	</nav> <!-- end navbar -->
 
-  <div class="container">
+  <div id="wrapper">
+  	<div class="container-fluid">
 
-    <h1>{{ title }}</h1>
-    <p>Welcome to {{ title }}</p>
+  		<div class="row">
+  			<div class="col-sm-12">
+  				<div id="jumbo">
+  					<img src="" alt="">
+  				</div>
+  			</div>
+  		</div>
 
-  </div>
+  		<div class="row">
+  			<div class="col-sm-12 text-center">
+  				Products
+  			</div>
+  			<div class="col-sm-12 multiple-products">
+  			
+  				<!-- need swig for loop here -->
+  				<div class="col-sm-4 individual-product">
+						<ul>
+							<li>Product Name</li>
+							<li>Price</li>
+							<li>Rating</li>
+						</ul>
+  				</div>
+
+  				<div class="col-sm-4 individual-product">
+						<ul>
+							<li>Product Name</li>
+							<li>Price</li>
+							<li>Rating</li>
+						</ul>
+  				</div>
+
+  				<div class="col-sm-4 individual-product">
+						<ul>
+							<li>Product Name</li>
+							<li>Price</li>
+							<li>Rating</li>
+						</ul>
+  				</div>
+  			<!-- end swig for loop here (remove filler material) -->
+
+  			</div>
+  		</div>
+
+  		<div class="row">
+  			<div class="col-sm-12">
+  				<h2>Signup Today!</h2>
+  				<p>
+	  				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis ad soluta, qui minima, doloremque ex esse voluptas exercitationem facere natus officia veniam rerum maiores nobis modi incidunt laborum voluptatum quisquam.
+  				</p>
+  				<input type="text">
+  				<input type="submit" value="Signup">
+  			</div>
+  		</div>
+
+  	</div> <!-- end .container-fluid -->
+  </div> <!-- end #wrapper -->
+
+  <footer>
+  	<!-- need to add footer -->
+  </footer>
 
 {% endblock %}

@@ -1,8 +1,111 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Table of Contents
+	1) universal styles
+	  - Navbar
+	  - Footer
+	2) index.html
+	3) new.html
+	4) restaurant.html
+	5) edit.html
 
-a {
-  color: #00B7FF;
-}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*--------------------------------------
+            Universal Styles
+--------------------------------------*/
+	html {
+		font-size: 16px;
+	}
+
+	body {
+	  font-family: 'Quicksand', sans-serif;
+	}
+
+	#wrapper {
+
+	}
+
+	a {
+	  color: #00B7FF;
+	  text-decoration: none;
+	}
+
+	a:hover{
+		text-decoration: none;
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+
+/*++++++++++++  Navbar  ++++++++++++++*/
+
+	nav {
+    background: orange;
+    border: none;
+    border-radius: 0;
+    display: flex;
+    font-size: 1.75rem;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+    /*text-align: center;*/
+	}
+
+
+/*--------------------------------------
+            index.html
+--------------------------------------*/
+ /* ---------- products ---------- */
+	.multiple-products {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	.individual-product {
+		border: 1px solid red;
+		height: 300px;
+		width: 300px;
+	}
+
+/* ---------- signup ---------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
