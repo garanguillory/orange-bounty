@@ -16,6 +16,8 @@ router.get('/', function(req, res, next) {
 
 
 
+
+
 router.get('/products', function(req, res, next) {
 
 		var column = 'rating';
