@@ -1,0 +1,32 @@
+ {% extends 'layout.html' %}
+
+ {% block title %}{% endblock %}
+
+
+ {% block content %}
+ 	<nav>
+ 		
+ 		<a href="/">Orange Bounty</a>
+ 		<a href="/products">Products</a>
+ 		<a href="/checkout"><div class="checkout"><span>3</span> Item(s) for Checkout</div></a>
+ 		
+ 	</nav> <!-- end navbar -->
+
+   <div id="wrapper">
+   	<div class="container-fluid"> 
+
+		 <form action="/charge" method="POST">
+		    <script
+		      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+		      data-key="pk_test_RjaWB73CDU8Vwyddo4gwCSxk"
+		      data-amount="1000"
+		      data-name="Stripe Example"
+		      data-description="Pay Me!"
+		      data-currency="usd">
+		      </script>
+		  </form>
+		
+		</div>
+	</div> <!-- end #wrapper -->
+
+{% endblock %}

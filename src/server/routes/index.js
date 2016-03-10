@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var knex = require('../../../db/knex');
+var stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 function Fruits() {
   return knex('fruits');
 }
@@ -13,9 +14,6 @@ router.get('/', function(req, res, next) {
   	res.render('index', {fruits: result} );
   });
 });
-
-
-
 
 
 router.get('/products', function(req, res, next) {
@@ -36,6 +34,30 @@ router.get('/products', function(req, res, next) {
 router.get('/checkout', function(req, res, next) {
   res.render('checkout');
 });
+
+
+router.get('/charge', function(req, res, next){
+  res.render('charge');
+});
+
+router.post('/charge', function(req, res, next) {
+    var stripeToken = req.body.stripeToken;
+    var amount =  req.body.stripeAmount;
+
+    stripe.charges.create({
+        card: stripeToken,
+        currency: 'usd',
+        amount: amount
+    },
+    function(err, charge) {
+        if (err) {
+            res.send('error');
+        } else {
+            res.send('success');
+        }
+    });
+});
+
 
 
 module.exports = router;
