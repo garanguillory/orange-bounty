@@ -31,7 +31,16 @@
   			<div class="col-sm-12 multiple-products">
   			
   				<!-- need swig for loop here -->
+        {% for fruits in fruits %}
   				<div class="col-sm-4 individual-product">
+						<ul>
+							<li>fruit.name</li>
+							<li>fruit.price</li>
+							<li>fruit.rating</li>
+						</ul>
+  				</div>
+        {% end for %}
+<!--   				<div class="col-sm-4 individual-product">
 						<ul>
 							<li>Product Name</li>
 							<li>Price</li>
@@ -45,15 +54,7 @@
 							<li>Price</li>
 							<li>Rating</li>
 						</ul>
-  				</div>
-
-  				<div class="col-sm-4 individual-product">
-						<ul>
-							<li>Product Name</li>
-							<li>Price</li>
-							<li>Rating</li>
-						</ul>
-  				</div>
+  				</div> -->
   			<!-- end swig for loop here (remove filler material) -->
 
   			</div>
