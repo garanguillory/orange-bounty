@@ -25,7 +25,7 @@
             <!-- in routes order the way Danny did in former project -->
             <a href="/products?name=ASC"><li>Name</li></a>
             <a href="/products?price=ASC"><li>Price</li></a>
-            <a href="/products?rating=ASC"><li>Rating</li></a>
+            <a href="/products?rating=DESC"><li>Rating</li></a>
           </ul>
   			</div>
   		</div>
@@ -35,58 +35,22 @@
   		<div class="row">
 
       <!-- need swig for loop here -->
+      {% for fruit in fruits %}
   			<div class="col-sm-12 product-info">
   			 <div class="col-sm-5">
-            <div class="product-image">
-              product image goes here
-              <img src="" alt=""> 
-            </div>
+            <img class="product-image" src="{{fruit.image}}" alt=""> 
          </div>
   				<div class="col-sm-7 product-stats">
 						<ul>
-							<li>Product Name goes here</li>
-							<li>Price goes here</li>
-							<li>Rating goes here</li>
+							<li>{{fruit.name}}</li>
+							<li>${{fruit.price}}</li>
+							<li>{{fruit.rating}}</li>
 						</ul>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est quo, laudantium inventore iste. Voluptate a exercitationem nam obcaecati eius hic, voluptatibus recusandae provident in ut quasi autem, tenetur nihil incidunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit deserunt perferendis pariatur deleniti numquam culpa minima, hic, modi illo dolor, voluptate aperiam esse neque, assumenda a totam quidem dolorem nemo!</p>
+            <p>{{fruit.description}}</p>
   				</div>
   			</div> <!-- end .product-info -->
+      {% endfor %}
 
-        <div class="col-sm-12 product-info">
-         <div class="col-sm-5">
-            <div class="product-image">
-              product image goes here
-              <img src="" alt=""> 
-            </div>
-         </div>
-          <div class="col-sm-7 product-stats">
-            <ul>
-              <li>Product Name goes here</li>
-              <li>Price goes here</li>
-              <li>Rating goes here</li>
-            </ul>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est quo, laudantium inventore iste. Voluptate a exercitationem nam obcaecati eius hic, voluptatibus recusandae provident in ut quasi autem, tenetur nihil incidunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit deserunt perferendis pariatur deleniti numquam culpa minima, hic, modi illo dolor, voluptate aperiam esse neque, assumenda a totam quidem dolorem nemo!</p>
-          </div>
-        </div> <!-- end .product-info -->
-
-        <div class="col-sm-12 product-info">
-         <div class="col-sm-5">
-            <div class="product-image">
-              product image goes here
-              <img src="" alt=""> 
-            </div>
-         </div>
-          <div class="col-sm-7 product-stats">
-            <ul>
-              <li>Product Name goes here</li>
-              <li>Price goes here</li>
-              <li>Rating goes here</li>
-            </ul>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est quo, laudantium inventore iste. Voluptate a exercitationem nam obcaecati eius hic, voluptatibus recusandae provident in ut quasi autem, tenetur nihil incidunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit deserunt perferendis pariatur deleniti numquam culpa minima, hic, modi illo dolor, voluptate aperiam esse neque, assumenda a totam quidem dolorem nemo!</p>
-          </div>
-        </div> <!-- end .product-info -->
-
-      <!-- end swig for loop here (remove filler material) -->
   		</div>
 
   	</div> <!-- end .container-fluid -->

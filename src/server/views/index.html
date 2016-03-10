@@ -28,34 +28,19 @@
   			<div class="col-sm-12 text-center">
   				<h2>Products</h2>
   			</div>
-  			<div class="col-sm-12 multiple-products">
-  			
-  				<!-- need swig for loop here -->
-        {% for fruits in fruits %}
-  				<div class="col-sm-4 individual-product">
-						<ul>
-							<li>fruit.name</li>
-							<li>fruit.price</li>
-							<li>fruit.rating</li>
-						</ul>
-  				</div>
-        {% end for %}
-<!--   				<div class="col-sm-4 individual-product">
-						<ul>
-							<li>Product Name</li>
-							<li>Price</li>
-							<li>Rating</li>
-						</ul>
-  				</div>
 
+  			<div class="col-sm-12 multiple-products">
+          
+        {% for fruit in fruits %}
   				<div class="col-sm-4 individual-product">
 						<ul>
-							<li>Product Name</li>
-							<li>Price</li>
-							<li>Rating</li>
+							<li>{{fruit.name}}</li>
+							<li>Price: ${{fruit.price}}</li>
+							<li>Rating: {{fruit.rating}}</li>
 						</ul>
-  				</div> -->
-  			<!-- end swig for loop here (remove filler material) -->
+            <img src="{{fruit.image}}" alt="{{fruit.name}}">
+  				</div>
+        {% endfor %}
 
   			</div>
   		</div>
