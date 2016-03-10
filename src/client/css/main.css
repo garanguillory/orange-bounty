@@ -4,8 +4,8 @@
 	  - Navbar
 	  - Footer
 	2) index.html
-	3) new.html
-	4) restaurant.html
+	3) products.html
+	4) .html
 	5) edit.html
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -23,7 +23,7 @@
 	}
 
 	#wrapper {
-
+		position: relative;
 	}
 
 	a {
@@ -53,10 +53,11 @@
     /*text-align: center;*/
 	}
 
+
 /*++++++++++++  Footer  ++++++++++++++*/
 	
 	footer {
-		
+
 	}
 
 	footer div{
@@ -72,66 +73,108 @@
             index.html
 --------------------------------------*/
 
-/* ---------- jumbo ---------- */
+	/* ---------- jumbo ---------- */
 
-	#jumbo {
-		border: 1px solid red;
-		height: 300px;
-		margin: 0 auto;
+		#jumbo {
+			border: 1px solid red;
+			height: 300px;
+			margin: 0 auto;
+			margin-bottom: 1rem;
+			text-align: center;
+			width: 90%;
+		}
+
+
+	/* ---------- products ---------- */
+		.multiple-products {
+			display: flex;
+			justify-content: space-around;
+			margin-top: 1rem;
+		}
+
+		.individual-product {
+			border: 1px solid red;
+			height: 300px;
+			width: 300px;
+		}
+
+	/* ---------- signup ---------- */
+
+		.signup {
+			background: lightgrey;
+			margin-bottom: 1rem;
+			margin-top: 2rem;
+			padding-bottom: 2rem;
+		}
+
+		.email-signup {
+			width: 82%;
+		}
+
+		.submit-signup {
+			width: 16%;
+		}
+
+
+/*--------------------------------------
+            products.html
+--------------------------------------*/
+
+	.product-sort ul, 
+	.product-sort ul li,
+	.product-sort h3 {
+		display: inline-block;
+	}
+
+	.product-sort ul li {
+		margin-left: 1rem;
+		margin-right: 1rem;
+	}
+
+	.product-sort ul li:last-child {
+		margin-right: 0;
+	}
+
+	.product-info {
 		margin-bottom: 1rem;
-		text-align: center;
-		width: 90%;
 	}
 
-
- /* ---------- products ---------- */
-	.multiple-products {
-		display: flex;
-		justify-content: space-around;
-		margin-top: 1rem;
-	}
-
-	.individual-product {
+	.product-image {
 		border: 1px solid red;
 		height: 300px;
 		width: 300px;
 	}
 
-/* ---------- signup ---------- */
+	.product-stats {
 
-	.signup {
-		background: lightgrey;
+	}
+
+	.product-stats ul li {
 		margin-bottom: 1rem;
-		margin-top: 2rem;
-		padding-bottom: 2rem;
-	}
-
-	.email-signup {
-		width: 82%;
-	}
-
-	.submit-signup {
-		width: 16%;
 	}
 
 
+/*--------------------------------------
+            checkout.html
+--------------------------------------*/
 
+	#your-purchase {
+		background: lightgrey;
+	}
+	
+	.shipping-section,
+	.billing-section,
+	.credit-card-section {
+		margin-bottom: 2rem;
+	}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	.shipping-section input,
+	.billing-section input{
+		width: 100%;
+		margin-bottom: 1rem;
+	}
+	
+	
 
 
 

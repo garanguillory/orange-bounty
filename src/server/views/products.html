@@ -1,0 +1,134 @@
+{% extends 'layout.html' %}
+
+{% block title %}{% endblock %}
+
+
+{% block content %}
+	<nav>
+		
+			<a href="/">Orange Bounty</a>
+			<a href="/products">Products</a>
+			<a href="/checkout"><div class="checkout"><span>3</span> Item(s) for Checkout</div></a>
+		
+	</nav> <!-- end navbar -->
+
+  <div id="wrapper">
+  	<div class="container-fluid">
+
+  		<div class="row">
+        <div class="col-sm-12">
+          <h2>Products</h2>
+        </div>
+  			<div class="col-sm-12 product-sort">
+  				<h3>Sort by:</h3>
+          <ul>
+            <!-- in routes order the way Danny did in former project -->
+            <a href="/products?name=ASC"><li>Name</li></a>
+            <a href="/products?price=ASC"><li>Price</li></a>
+            <a href="/products?rating=ASC"><li>Rating</li></a>
+          </ul>
+  			</div>
+  		</div>
+  
+      <hr>
+
+  		<div class="row">
+
+      <!-- need swig for loop here -->
+  			<div class="col-sm-12 product-info">
+  			 <div class="col-sm-5">
+            <div class="product-image">
+              product image goes here
+              <img src="" alt=""> 
+            </div>
+         </div>
+  				<div class="col-sm-7 product-stats">
+						<ul>
+							<li>Product Name goes here</li>
+							<li>Price goes here</li>
+							<li>Rating goes here</li>
+						</ul>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est quo, laudantium inventore iste. Voluptate a exercitationem nam obcaecati eius hic, voluptatibus recusandae provident in ut quasi autem, tenetur nihil incidunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit deserunt perferendis pariatur deleniti numquam culpa minima, hic, modi illo dolor, voluptate aperiam esse neque, assumenda a totam quidem dolorem nemo!</p>
+  				</div>
+  			</div> <!-- end .product-info -->
+
+        <div class="col-sm-12 product-info">
+         <div class="col-sm-5">
+            <div class="product-image">
+              product image goes here
+              <img src="" alt=""> 
+            </div>
+         </div>
+          <div class="col-sm-7 product-stats">
+            <ul>
+              <li>Product Name goes here</li>
+              <li>Price goes here</li>
+              <li>Rating goes here</li>
+            </ul>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est quo, laudantium inventore iste. Voluptate a exercitationem nam obcaecati eius hic, voluptatibus recusandae provident in ut quasi autem, tenetur nihil incidunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit deserunt perferendis pariatur deleniti numquam culpa minima, hic, modi illo dolor, voluptate aperiam esse neque, assumenda a totam quidem dolorem nemo!</p>
+          </div>
+        </div> <!-- end .product-info -->
+
+        <div class="col-sm-12 product-info">
+         <div class="col-sm-5">
+            <div class="product-image">
+              product image goes here
+              <img src="" alt=""> 
+            </div>
+         </div>
+          <div class="col-sm-7 product-stats">
+            <ul>
+              <li>Product Name goes here</li>
+              <li>Price goes here</li>
+              <li>Rating goes here</li>
+            </ul>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est quo, laudantium inventore iste. Voluptate a exercitationem nam obcaecati eius hic, voluptatibus recusandae provident in ut quasi autem, tenetur nihil incidunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit deserunt perferendis pariatur deleniti numquam culpa minima, hic, modi illo dolor, voluptate aperiam esse neque, assumenda a totam quidem dolorem nemo!</p>
+          </div>
+        </div> <!-- end .product-info -->
+
+      <!-- end swig for loop here (remove filler material) -->
+  		</div>
+
+  	</div> <!-- end .container-fluid -->
+  </div> <!-- end #wrapper -->
+
+  <footer>
+  	<div class="col-sm-12">
+  		<div class="col-sm-3">
+  			<h3>Vist Us</h3>
+  			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d212248.78035832208!2d-117.86051004814144!3d33.77649814515177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc925c54d5f7cf%3A0xdea6c3618ff0d607!2sOrange+County%2C+CA!5e0!3m2!1sen!2sus!4v1457504025276" width="200" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+  		</div>
+  		<div class="col-sm-3">
+  			<h3>Section</h3>
+  				<ul>
+  					<li>Item One</li>
+  					<li>Item Two</li>
+  					<li>Item Three</li>
+  					<li>Item Four</li>
+  				</ul>
+  		</div>
+			<div class="col-sm-3">
+				<h3>Section</h3>
+					<ul>
+						<li>Item One</li>
+						<li>Item Two</li>
+						<li>Item Three</li>
+						<li>Item Four</li>
+					</ul>
+			</div>
+			<div class="col-sm-3">
+				<h3>Section</h3>
+					<ul>
+						<li>Item One</li>
+						<li>Item Two</li>
+						<li>Item Three</li>
+						<li>Item Four</li>
+					</ul>
+			</div>
+  	</div>
+  </footer>
+
+{% endblock %}
+
+
+

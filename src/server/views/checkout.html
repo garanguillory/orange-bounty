@@ -1,0 +1,182 @@
+{% extends 'layout.html' %}
+
+{% block title %}{% endblock %}
+
+
+{% block content %}
+	<nav>
+		
+		<a href="/">Orange Bounty</a>
+		<a href="/products">Products</a>
+		<a href="/checkout"><div class="checkout"><span>3</span> Item(s) for Checkout</div></a>
+		
+	</nav> <!-- end navbar -->
+
+  <div id="wrapper">
+  	<div class="container-fluid">
+  		<div class="row">
+  			<div class="col-sm-10 col-sm-offset-1" id="your-purchase">
+  				<div class="col-sm-12">Your Purchase</div><br><br>
+          <!-- start swig forloop here -->
+          <div class="col-sm-6">Product Name x<span class="product-quantity">1</span> <span class="product-price">$30</span></div>
+          <hr>
+          <!-- end swig loop here -->
+          <div class="col-sm-6">Total: </div>
+  			</div>
+  		</div>
+    <hr>
+  		<div class="row shipping-section">
+  			<div class="col-sm-12">
+  				<h2>Shipping</h2>
+  			</div>
+  			<div class="col-sm-12">
+  			   <div class="col-sm-4">
+              <label for="#shipping-first-name">First Name</label><br>
+              <input name="shipping-first-name" id="shipping-first-name" type="text">
+           </div>
+           <div class="col-sm-4">
+              <label for="#shipping-last-name">Last Name</label><br>
+              <input name="shipping-last-name" id="shipping-last-name" type="text">
+           </div>
+           <div class="col-sm-4">
+              <label for="#shipping-company">Company</label><br>
+              <input name="shipping-company" id="shipping-company" type="text">
+           </div>
+  			</div>
+        <div class="col-sm-12">
+          <div class="col-sm-6">
+            <label for="#shipping-address-line-one">Address Line 1</label><br>
+            <input name="shipping-address-line-one" id="shipping-address-line-one" type="text">
+          </div>
+          <div class="col-sm-6">
+            <label for="#shipping-address-line-two">Address Line 2</label><br>
+            <input name="shipping-address-line-two" id="shipping-address-line-two" type="text">
+          </div>
+        </div>
+
+        <div class="col-sm-12">
+           <div class="col-sm-4">
+              <label for="#state">State</label><br>
+              <input name="state" id="state" type="text">
+           </div>
+           <div class="col-sm-4">
+              <label for="#zip">Zip</label><br>
+              <input name="zip" id="zip" type="text">
+           </div>
+           <div class="col-sm-4 checkbox">
+              <br>
+              <!-- <label> -->
+                <input type="checkbox"> Billing same as Shipping?
+              <!-- </label> -->
+           </div>
+        </div>
+  		</div> <!-- end .shipping-section -->
+
+      <div class="row billing-section">
+        <div class="col-sm-12">
+          <h2>Billing</h2>
+        </div>
+        <div class="col-sm-12">
+           <div class="col-sm-4">
+              <label for="#first-name">First Name</label><br>
+              <input name="first-name" id="first-name" type="text">
+           </div>
+           <div class="col-sm-4">
+              <label for="#last-name">Last Name</label><br>
+              <input name="last-name" id="last-name" type="text">
+           </div>
+           <div class="col-sm-4">
+              <label for="#company">Company</label><br>
+              <input name="company" id="company" type="text">
+           </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="col-sm-6">
+            <label for="#address-line-one">Address Line 1</label><br>
+            <input name="address-line-one" id="address-line-one" type="text">
+          </div>
+          <div class="col-sm-6">
+            <label for="#address-line-two">Address Line 2</label><br>
+            <input name="address-line-two" id="address-line-two" type="text">
+          </div>
+        </div>
+        <div class="col-sm-12">
+           <div class="col-sm-4">
+              <label for="#state">State</label><br>
+              <input name="state" id="state" type="text">
+           </div>
+           <div class="col-sm-4">
+              <label for="#zip">Zip</label><br>
+              <input name="zip" id="zip" type="text">
+           </div>
+        </div>
+      </div> <!-- end .billing-section -->
+
+      <div class="row credit-card-section">
+        <div class="col-sm-12">
+          <h2>Credit Card Information</h2>
+        </div>
+        <div class="col-sm-12">
+           <div class="col-sm-3">
+              <label for="#credit-card-number">Credit Card Number</label><br>
+              <input name="credit-card-number" id="credit-card-number" type="number">
+           </div>
+           <div class="col-sm-3">
+              <label for="#expiration">Expiration</label><br>
+              <input name="expiration" id="expiration" type="date">
+           </div>
+           <div class="col-sm-3">
+              <label for="#cvc">CVC</label><br>
+              <input name="cvc" id="cvc" type="number">
+           </div>
+           <div class="col-sm-3">
+              <br>
+              <input id="purchase" type="submit" value="Purchase">
+           </div>
+        </div>
+
+      </div> <!-- end .credit-card-section -->
+
+  	</div> <!-- end .container-fluid -->
+  </div> <!-- end #wrapper -->
+
+  <footer>
+  	<div class="col-sm-12">
+  		<div class="col-sm-3">
+  			<h3>Vist Us</h3>
+  			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d212248.78035832208!2d-117.86051004814144!3d33.77649814515177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc925c54d5f7cf%3A0xdea6c3618ff0d607!2sOrange+County%2C+CA!5e0!3m2!1sen!2sus!4v1457504025276" width="200" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+  		</div>
+  		<div class="col-sm-3">
+  			<h3>Section</h3>
+  				<ul>
+  					<li>Item One</li>
+  					<li>Item Two</li>
+  					<li>Item Three</li>
+  					<li>Item Four</li>
+  				</ul>
+  		</div>
+			<div class="col-sm-3">
+				<h3>Section</h3>
+					<ul>
+						<li>Item One</li>
+						<li>Item Two</li>
+						<li>Item Three</li>
+						<li>Item Four</li>
+					</ul>
+			</div>
+			<div class="col-sm-3">
+				<h3>Section</h3>
+					<ul>
+						<li>Item One</li>
+						<li>Item Two</li>
+						<li>Item Three</li>
+						<li>Item Four</li>
+					</ul>
+			</div>
+  	</div>
+  </footer>
+
+{% endblock %}
+
+
+
